@@ -1,0 +1,83 @@
+#For Loop Demo
+def main():
+    #print integers between 0 and 10
+    for number in range(11):
+        print(number)
+
+    #print intgers between 5 and 10
+    print("\n\n")
+    for number in range(5,11):
+        print(number)
+    
+    #print even numbers between 0 and 10
+    print("\n\n")
+    for number in range (0,11,2):
+        print(number)
+    
+    #promt the user for start and stop values and print the numbers between start and stop
+    while(True):
+        start = int(input("Enter an integer to be the start number: "))
+        end = int(input("Enter another integer to be the end number: "))
+        if (end <= start):
+            print("ERROR: Please print an end number larger than the start number")
+            continue
+
+        else:
+            for number in range(start,end+1):
+                print(number)
+            break
+
+main()
+
+
+
+While Loop Demo
+def main():
+
+    #create a while loop that prints integers between 0 and 10
+    output_value = 0
+    stop_value = 10
+
+    #run the loop while the output_value is less than or euqal to the stopvalue
+    while (output_value <= stop_value):
+        print(output_value)
+        #increment output_value
+        output_value += 1
+        #output_value = output_value + 1
+    
+    print("\n\n")
+    output_value = 0
+    while True:
+        print (output_value)
+        output_value += 1
+
+        #if output value is greater than stop value> Break the loop
+        if output_value > stop_value:
+            break
+main()
+
+
+List Demo
+def main():
+
+    #create a while loop that prints integers between 0 and 10
+    output_value = 0
+    stop_value = 10
+
+    #run the loop while the output_value is less than or euqal to the stopvalue
+    while (output_value <= stop_value):
+        print(output_value)
+        #increment output_value
+        output_value += 1
+        #output_value = output_value + 1
+    
+    print("\n\n")
+    output_value = 0
+    while True:
+        print (output_value)
+        output_value += 1
+
+        #if output value is greater than stop value> Break the loop
+        if output_value > stop_value:
+            break
+main()
