@@ -5,17 +5,13 @@ def get_season(month_number):
         while(True):
             
             if month_number in ["12", "1", "2"]:
-                print("Your month is in the season Winter")
-                break
+                return ("Your month is in the season Winter")
             elif month_number in ["3", "4", "5"]:
-                print("Your month is in the season Spring")
-                break
+                return ("Your month is in the season Spring")
             elif month_number in ["6", "7", "8"]:
-                print("Your month is in the season Summer")
-                break
+                return ("Your month is in the season Summer")
             elif month_number in ["9", "10", "11"]:
-                print("Your month is in the season Fall")
-                break
+                return ("Your month is in the season Fall")
             else:
                 print("Error: Please enter an integer between 1 and 12")
                 month_number = input("Enter a month by its Number(1-12): ")
@@ -25,7 +21,9 @@ def main():
 
     user_month = input("Enter a month by its Number(1-12): ")
 
-    get_season(user_month)
+    prompt = get_season(user_month)
+
+    print(f"{prompt}")
 
 
 
