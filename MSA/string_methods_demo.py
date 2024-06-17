@@ -32,7 +32,7 @@ def main():
     print(f"{my_name} has {len(my_name)} letters")
 
     for letter_index in range(len(my_name)):
-        print(f"Letter {letter_index: {my_name[letter_index]}}")
+        print(f"Letter {my_name[letter_index]} : {letter_index}")
 
     print("\n\n")
     sentence = "I have a dog. My dog is cute. Do you want a dog?"
@@ -51,5 +51,13 @@ def main():
         number_dog += 1
 
 
-    print(number_dog - 1)
+    print(f"Number of dogs: {number_dog -1}")
+
+    #How to use the split method
+    car_info = "Ferrari,f-50,2021,500000,4.8"
+
+    car_data = car_info.split(",")
+    print(car_data)
+
+
 main()
