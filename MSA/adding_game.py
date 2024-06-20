@@ -1,6 +1,3 @@
-#write 2 functions that get the level and number of questions from the user
-#Based on the answers write a for loop and random functions to print the desired number of questions
-#Use error handling in the problems
 import random
 def get_level():
     while(True):
@@ -18,32 +15,44 @@ def get_number_of_questions():
             return question_number
         else:
             print("ERROR: Please enter an integer value between 3 and 10!")
+def run_game(level):
+    if(level == 1):
+        a = random.randint(0,9)
+        b = random.randint(0,9)
+    if(level == 2):
+        a = random.randint(10,99)
+        b = random.randint(10,99)
+    if(level == 3):
+        a = random.randint(100,999)
+        b = random.randint(100,999)
+    counter = 0
+    while(True):
+        try:
+            answer = int(input(f"{a} + {b} = "))
+            if(answer == a + b):
+                print("CORRECT!!!")
+                return True
+            else:
+                print("WRONG!!!")
+                counter += 1
+                if (counter == 3):
+                    print(f"Correct Answer: {a} + {b} = {a + b}")
+                    return False
+        except:
+            print("WRONG!!!")
+            counter += 1
+            if (counter == 3):
+                print(f"Correct Answer: {a} + {b} = {a + b}")
+                return False
 
 def main():
-    user_level =  int(get_level())
+    user_level = int(get_level())
     user_number_of_questions = int(get_number_of_questions())
-
-    #Write an if loop for each level
-    if(user_level == 1):
-        #write for loops for each level
-        for i in range (user_number_of_questions):
-            a = random.randint(0,9)
-            b = random.randint(0,9)
-            counter = 0
-            while(True):
-                answer = int(input(f"{a} + {b} = "))
-                if(answer == a + b):
-                    print("CORRECT!!!")
-                    break
-                else:
-                    print("WRONG!!!")
-                    counter += 1
-                    if (counter == 3):
-                        print(f"Correct Answer: {a} + {b} = {a + b}")
-                        break
-
-    #if(user_level = 2):
-
-    #if(user_level = 3):
+    correct = 0
+    for i in range(user_number_of_questions):
+        if(run_game(user_level)):
+            correct += 1
+    percent_correct = correct * 100 / user_number_of_questions
+    print(f"You got {correct} out of {user_number_of_questions} questions correct: {percent_correct:.2f}%")
 
 main()
