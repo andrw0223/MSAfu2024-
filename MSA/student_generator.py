@@ -3,7 +3,7 @@ import student
 def load_students(file_name):
     list_of_students = []
     student1 = student.Student("Baljeet", "Patel", "Programming", 45, 4.14, 656565 )
-    student2 = student.Student("Po", "Fu","Programming", 42, 4.78, 261715 )
+    student2 = student.Student("Po", "The Dragon Warrior","Programming", 42, 4.78, 261715 )
     list_of_students.append(student1)
     list_of_students.append(student2)
     student_file = open(file_name, "r")
