@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    int wordlength{ 0 };
+    for (int i = 0; i < n; i++)
+    {
+        string word{};
+        cin >> word;
+        wordlength += word.length();
+        if (i == 0)
+        {
+            cout << word;
+        }
+        else
+        {
+            if (wordlength < k + 1)
+            {
+                cout << " " << word;
+            }
+            if (wordlength > k)
+            {
+                cout << '\n' << word;
+                wordlength = word.length();
+            }
+            
+        }
+        
+    }
+    return 0;
+}
