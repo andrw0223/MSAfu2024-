@@ -12,7 +12,7 @@ int main()
 
     int A = sums[6] - sums[5];
     int B = sums[6] - sums[4];
-    int C = sums[6] - a - b;
+    int C = sums[6] - A - B;
 
     cout << A << " " << B << " " <<C;
     return 0;
