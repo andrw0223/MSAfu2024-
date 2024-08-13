@@ -1,0 +1,19 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int a, b, c, d, e, f, g;
+    cin >> a >> b >> c >> d >> e >> f >> g;
+
+    int sums[7] = {a, b, c, d, e, f, g};
+    sort(sums, sums + 7);
+
+    int A = sums[6] - sums[5];
+    int B = sums[6] - sums[4];
+    int C = sums[6] - a - b;
+
+    cout << A << " " << B << " " <<C;
+    return 0;
+}
