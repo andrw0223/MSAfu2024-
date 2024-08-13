@@ -1,0 +1,50 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+	int n{};
+	cin >> n;
+	int pebble1[3] = { 1,0,0 };
+	int pebble2[3] = { 0,1,0 };
+	int pebble3[3] = { 0,0,1 };
+	int score1{0};
+	int score2{0};
+	int score3{0};
+
+	for (int i = 0; i < n; i++)
+	{
+		int a, b, g;
+		cin >> a >> b >> g;
+		int x1 = pebble1[a - 1];
+		int y1 = pebble1[b - 1];
+		pebble1[b - 1] = x1;
+		pebble1[a - 1] = y1;
+		if (pebble1[g - 1] == 1)
+		{
+			score1 += 1;
+		}
+		int x2 = pebble2[a - 1];
+		int y2 = pebble2[b - 1];
+		pebble2[b - 1] = x2;
+		pebble2[a - 1] = y2;
+		if (pebble2[g - 1] == 1)
+		{
+			score2 += 1;
+		}
+		int x3 = pebble3[a - 1];
+		int y3 = pebble3[b - 1];
+		pebble3[b - 1] = x3;
+		pebble3[a - 1] = y3;
+		if (pebble3[g - 1] == 1)
+		{
+			score3 += 1;
+		}
+		int z = max(score1, score2);
+		int high_score = max(z, score3);
+		cout << high_score;
+	}
+	
+   return 0;
+}
