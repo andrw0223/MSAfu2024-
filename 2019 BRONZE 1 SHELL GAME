@@ -41,10 +41,10 @@ int main()
 		{
 			score3 += 1;
 		}
-		int z = max(score1, score2);
-		int high_score = max(z, score3);
-		cout << high_score;
+		
 	}
-	
-   return 0;
+	int z = max(score1, score2);
+	int high_score = max(z, score3);
+	cout << high_score;
+    return 0;
 }
