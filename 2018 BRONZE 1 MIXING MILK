@@ -9,7 +9,7 @@ int main()
 	cin >> c2 >> m2;
 	cin >> c3 >> m3;
 	int buckets[3] = { m1, m2, m3 };
-	for (int i = 0; i < 32; i++)
+	for (int i = 0; i < 33; i++)
 	{
 		if (buckets[0] + buckets[1] < c2 + 1)
 		{
